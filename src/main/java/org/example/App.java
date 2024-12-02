@@ -1,8 +1,7 @@
 package org.example;
 
 /**
- * Hello world!
- *
+ *  Класс для демонстрации стравнения производительности коллекций
  */
 public class App 
 {
@@ -10,7 +9,6 @@ public class App
     {
         PerformanceCheck tester = new PerformanceCheck();
         tester.doTests(1000);
-
         System.out.println( "Hello World!" );
     }
 }
