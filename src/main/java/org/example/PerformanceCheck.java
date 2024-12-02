@@ -25,6 +25,14 @@ public class PerformanceCheck {
         }
     }
 
+    public void doTests(int iteration) {
+        testAdd(iteration);
+        testGet(iteration);
+        testRemove(iteration);
+
+        printTable();;
+    }
+
     public long getTime (int i, int j){
         return time[i][j];
     }
@@ -70,12 +78,12 @@ public class PerformanceCheck {
 
     public void printTable() {
         System.out.println("Метод\t\tТип списка\t\t Итерации\tВремя (ns)");
-        System.out.println("add\t\tArrayList\t\t 1000\t" + time[0][0]);
-        System.out.println("add\t\tLinkedList\t\t 1000\t" + time[1][0]);
-        System.out.println("get\t\tArrayList\t\t 1000\t" + time[0][1]);
-        System.out.println("get\t\tLinkedList\t\t 1000\t" + time[1][1]);
-        System.out.println("remove\t\tArrayList\t\t 1000\t" + time[0][2]);
-        System.out.println("remove\t\tLinkedList\t\t 1000\t" + time[1][2]);
+        System.out.println("add\t\t\tArrayList\t\t 1000\t\t" + time[0][0]);
+        System.out.println("add\t\t\tLinkedList\t\t 1000\t\t" + time[1][0]);
+        System.out.println("get\t\t\tArrayList\t\t 1000\t\t" + time[0][1]);
+        System.out.println("get\t\t\tLinkedList\t\t 1000\t\t" + time[1][1]);
+        System.out.println("remove\t\tArrayList\t\t 1000\t\t" + time[0][2]);
+        System.out.println("remove\t\tLinkedList\t\t 1000\t\t" + time[1][2]);
     }
 
 
