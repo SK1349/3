@@ -14,6 +14,21 @@ public class PerformanceCheck {
         this.linkedList = new LinkedList<>();
     }
 
+    public PerformanceCheck(int iteration) {
+        this.arrayList = new ArrayList<>();
+        for (int i = 0; i < iteration; i++){
+            arrayList.add(i);
+        }
+        this.linkedList = new LinkedList<>();
+        for (int i = 0; i < iteration; i++){
+            linkedList.add(i);
+        }
+    }
+
+    public long getTime (int i, int j){
+        return time[i][j];
+    }
+
     public void testAdd (int iteration) {
         long start = System.nanoTime();
         for (int i = 0; i < iteration; i++){
